@@ -1,0 +1,14 @@
+{
+  "name": "lasherassport",
+  "version": "1.0.0",
+  "description": "Landing page para Las Heras Sports - Lomas de Zamora",
+  "scripts": {
+    "dev": "tailwindcss -i ./assets/css/input.css -o ./assets/css/tailwind.css --watch",
+    "build": "tailwindcss -i ./assets/css/input.css -o ./assets/css/tailwind.css --minify"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.0",
+    "@tailwindcss/forms": "^0.5.7",
+    "@tailwindcss/typography": "^0.5.10"
+  }
+}

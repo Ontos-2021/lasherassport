@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Las Heras Sports – Fútbol, Pádel y Gym en Lomas de Zamora</title>
+  <meta name="description" content="Club deportivo en Lomas de Zamora. Fútbol, pádel, hockey, gimnasio y pileta. Av. Las Heras 1512. ☎️ 4288-1188">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Las Heras Sports - Todo el deporte en un lugar">
+  <meta property="og:description" content="Club deportivo completo en Lomas de Zamora">
+  <meta property="og:image" content="./assets/images/og-image.jpg">
+  <meta property="og:url" content="https://lasherassports.github.io">
+  <meta property="og:type" content="website">
+  
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SportsActivityLocation",
+    "name": "Las Heras Sports",
+    "description": "Club deportivo en Lomas de Zamora con fútbol, pádel, hockey, gimnasio y pileta",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Av. Las Heras 1512",
+      "addressLocality": "Lomas de Zamora",
+      "addressRegion": "Buenos Aires",
+      "postalCode": "1832",
+      "addressCountry": "AR"
+    },
+    "telephone": "+54-11-4288-1188",
+    "url": "https://lasherassports.github.io",
+    "openingHours": "Mo-Su 09:00-23:00",
+    "sameAs": [
+      "https://www.instagram.com/lasherassports/",
+      "https://facebook.com/lasherassports"
+    ]
+  }
+  </script>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <link href="assets/css/tailwind.css" rel="stylesheet">
+  <link href="assets/css/custom.css" rel="stylesheet">
+  <script defer src="assets/js/main.js"></script>
+</head>
+<body class="font-sans bg-light-gray text-text-gray">
+  <!-- Navegación flotante -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-lg transform -translate-y-full transition-transform duration-300" id="navbar">
+    <div class="container mx-auto px-4 relative">
+      <div class="flex items-center justify-between h-16">
+        <div class="font-bold text-xl text-green-600 flex items-center">
+          <span class="text-2xl mr-2">⚽</span>
+          Las Heras Sports
+        </div>
+        <div class="hidden md:flex space-x-6">
+          <a href="#actividades" class="text-gray-700 hover:text-green-600 transition-colors font-medium">Actividades</a>
+          <a href="#nosotros" class="text-gray-700 hover:text-green-600 transition-colors font-medium">Nosotros</a>
+          <a href="#horarios" class="text-gray-700 hover:text-green-600 transition-colors font-medium">Horarios</a>
+          <a href="#ubicacion" class="text-gray-700 hover:text-green-600 transition-colors font-medium">Ubicación</a>
+          <a href="#contacto" class="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition-colors font-medium">Contacto</a>
+        </div>
+        <button class="md:hidden text-gray-700 hover:text-green-600 transition-colors" id="mobile-menu-button">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" id="menu-icon">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+          <svg class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" id="close-icon">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+      <!-- Mobile Menu -->
+      <div class="mobile-menu" id="mobile-menu">
+        <a href="#actividades">Actividades</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#horarios">Horarios</a>
+        <a href="#ubicacion">Ubicación</a>
+        <a href="#contacto">Contacto</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- WhatsApp flotante -->
+  <a href="https://wa.me/5491142881188" target="_blank" class="whatsapp-float">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-6 h-6">
+      <path d="M12 2C6.477 2 2 6.477 2 12c0 1.85.504 3.63 1.457 5.188L2 22l4.926-1.43A9.953 9.953 0 0 0 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18c-1.64 0-3.232-.443-4.61-1.28l-.33-.197-2.924.849.834-2.86-.215-.338C4.443 15.232 4 13.64 4 12c0-4.411 3.589-8 8-8s8 3.589 8 8-3.589 8-8 8zm4.293-5.293c-.267-.133-1.577-.777-1.82-.867-.243-.09-.42-.133-.597.134-.177.267-.687.867-.843 1.045-.156.178-.31.2-.577.067-.267-.134-1.127-.415-2.148-1.323-.794-.708-1.33-1.582-1.486-1.85-.156-.267-.017-.411.117-.544.12-.119.267-.31.4-.467.134-.156.178-.267.267-.445.089-.178.045-.334-.022-.467-.067-.133-.597-1.44-.818-1.974-.216-.52-.436-.45-.597-.459-.153-.008-.334-.01-.515-.01-.178 0-.467.067-.712.334-.244.267-.933.912-.933 2.223 0 1.311.953 2.577 1.086 2.755.133.178 1.876 2.867 4.55 3.91.637.219 1.134.349 1.522.447.64.162 1.223.139 1.684.084.514-.062 1.577-.644 1.8-1.267.222-.622.222-1.155.156-1.267-.067-.111-.244-.178-.511-.311z"/>
+    </svg>
+  </a>
+  <!-- Hero Section -->
+  <section class="relative h-screen bg-cover bg-center" style="background-image: url('assets/images/hero/cancha-aerea.jpg')">
+    <div class="absolute inset-0 gradient-hero"></div>
+    <div class="relative z-10 flex items-center justify-center h-full text-center text-white">
+      <div class="max-w-4xl px-4">
+        <h1 class="text-4xl md:text-6xl font-bold mb-6 text-shadow animate-fade-in-up">Todo el deporte en un solo lugar</h1>
+        <p class="text-xl md:text-2xl mb-8 text-shadow">Fútbol • Pádel • Hockey • Gym • Pileta</p>
+        <div class="space-y-4 md:space-y-0 md:space-x-4 md:flex md:justify-center">
+          <a href="https://www.instagram.com/lasherassports/" target="_blank" class="btn-main btn-ripple pulse-green bg-green-500 hover:bg-green-600 px-8 py-3 rounded-lg font-semibold text-white inline-block">
+            <span>🤖 Chateá con nuestro bot</span>
+          </a>
+          <a href="#contacto" class="btn-main btn-ripple border-2 border-white hover:bg-white hover:text-black px-8 py-3 rounded-lg font-semibold inline-block">
+            <span>📅 Reservá tu cancha</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- Scroll indicator -->
+    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+      <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+      </svg>
+    </div>
+  </section>
+  <!-- Actividades -->
+  <section class="py-16 gradient-section pattern-dots" id="actividades">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-800">⚽ Nuestras Actividades</h2>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">Descubrí todas las opciones deportivas y recreativas que tenemos para vos y tu familia</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <!-- Card ejemplo -->
+        <div class="card-shadow bg-white rounded-xl overflow-hidden flex flex-col items-center p-6 hover:scale-105 transition-all duration-300 shine-effect float-animation">
+          <div class="bg-green-100 p-4 rounded-full mb-4">
+            <img src="assets/images/activities/futbol.svg" alt="Fútbol" class="w-12 h-12">
+          </div>
+          <h3 class="text-xl font-semibold mb-2 text-gray-800">Fútbol</h3>
+          <p class="text-gray-600 text-center text-sm leading-relaxed">Canchas 5, 7, 8 y 11. Escuela infantil y torneos internos.</p>
+          <div class="mt-4 px-3 py-1 bg-green-100 text-green-800 rounded-full text-xs font-medium">
+            ⭐ Más popular
+          </div>
+        </div>
+        <div class="card-shadow bg-white rounded-xl overflow-hidden flex flex-col items-center p-6 hover:scale-105 transition-all duration-300 shine-effect float-animation" style="animation-delay: 0.2s">
+          <div class="bg-blue-100 p-4 rounded-full mb-4">
+            <img src="assets/images/activities/padel.svg" alt="Pádel" class="w-12 h-12">
+          </div>
+          <h3 class="text-xl font-semibold mb-2 text-gray-800">Pádel</h3>
+          <p class="text-gray-600 text-center text-sm leading-relaxed">3 canchas outdoor de última generación, clases y reservas online.</p>
+          <div class="mt-4 px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-xs font-medium">
+            🆕 Nuevas canchas
+          </div>
+        </div>
+        <div class="card-shadow bg-white rounded-xl overflow-hidden flex flex-col items-center p-6 hover:scale-105 transition-all duration-300 shine-effect float-animation" style="animation-delay: 0.4s">
+          <div class="bg-pink-100 p-4 rounded-full mb-4">
+            <img src="assets/images/activities/hockey.svg" alt="Hockey" class="w-12 h-12">
+          </div>
+          <h3 class="text-xl font-semibold mb-2 text-gray-800">Hockey</h3>
+          <p class="text-gray-600 text-center text-sm leading-relaxed">Escuela femenina desde 6 años, coordinación Ale Gulla.</p>
+          <div class="mt-4 px-3 py-1 bg-pink-100 text-pink-800 rounded-full text-xs font-medium">
+            👩 Solo femenino
+          </div>
+        </div>
+        <div class="card-shadow bg-white rounded-xl overflow-hidden flex flex-col items-center p-6 hover:scale-105 transition-all duration-300 shine-effect float-animation" style="animation-delay: 0.6s">
+          <div class="bg-orange-100 p-4 rounded-full mb-4">
+            <img src="assets/images/activities/gym.svg" alt="Gym & Crossfit" class="w-12 h-12">
+          </div>
+          <h3 class="text-xl font-semibold mb-2 text-gray-800">Gym & Crossfit</h3>
+          <p class="text-gray-600 text-center text-sm leading-relaxed">Musculación, plataformas vibratorias, box de CrossFit.</p>
+          <div class="mt-4 px-3 py-1 bg-orange-100 text-orange-800 rounded-full text-xs font-medium">
+            💪 Todo equipado
+          </div>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-8">
+        <div class="card-shadow bg-white rounded-xl overflow-hidden flex flex-col items-center p-6 hover:scale-105 transition-all duration-300 shine-effect float-animation" style="animation-delay: 0.8s">
+          <div class="bg-cyan-100 p-4 rounded-full mb-4">
+            <img src="assets/images/activities/pileta.svg" alt="Pileta" class="w-12 h-12">
+          </div>
+          <h3 class="text-xl font-semibold mb-2 text-gray-800">Pileta / Natación</h3>
+          <p class="text-gray-600 text-center text-sm leading-relaxed">Actividades de pileta y gym acuático.</p>
+          <div class="mt-4 px-3 py-1 bg-cyan-100 text-cyan-800 rounded-full text-xs font-medium">
+            🏊 Acuático
+          </div>
+        </div>
+        <div class="card-shadow bg-white rounded-xl overflow-hidden flex flex-col items-center p-6 hover:scale-105 transition-all duration-300 shine-effect float-animation" style="animation-delay: 1s">
+          <div class="bg-yellow-100 p-4 rounded-full mb-4">
+            <img src="assets/images/activities/colonia.svg" alt="Colonia" class="w-12 h-12">
+          </div>
+          <h3 class="text-xl font-semibold mb-2 text-gray-800">Colonia</h3>
+          <p class="text-gray-600 text-center text-sm leading-relaxed">Programas recreativos para niños y adultos.</p>
+          <div class="mt-4 px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-xs font-medium">
+            👨‍👩‍👧‍👦 Familiar
+          </div>
+        </div>
+        <div class="card-shadow bg-white rounded-xl overflow-hidden flex flex-col items-center p-6 hover:scale-105 transition-all duration-300 shine-effect float-animation" style="animation-delay: 1.2s">
+          <div class="bg-purple-100 p-4 rounded-full mb-4">
+            <img src="assets/images/activities/eventos.svg" alt="Eventos" class="w-12 h-12">
+          </div>
+          <h3 class="text-xl font-semibold mb-2 text-gray-800">Eventos & Salón</h3>
+          <p class="text-gray-600 text-center text-sm leading-relaxed">Salón multieventos y parrilla al aire libre.</p>
+          <div class="mt-4 px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-xs font-medium">
+            🎉 Celebraciones
+          </div>
+        </div>
+        <div class="card-shadow bg-white rounded-xl overflow-hidden flex flex-col items-center p-6 hover:scale-105 transition-all duration-300 shine-effect float-animation" style="animation-delay: 1.4s">
+          <div class="bg-gray-100 p-4 rounded-full mb-4">
+            <img src="assets/images/activities/estacionamiento.svg" alt="Estacionamiento" class="w-12 h-12">
+          </div>
+          <h3 class="text-xl font-semibold mb-2 text-gray-800">Estacionamiento</h3>
+          <p class="text-gray-600 text-center text-sm leading-relaxed">Playón propio dentro del predio.</p>
+          <div class="mt-4 px-3 py-1 bg-gray-100 text-gray-800 rounded-full text-xs font-medium">
+            🚗 Gratuito
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Estadísticas -->
+  <section class="py-16 bg-gradient-to-r from-green-500 to-green-600 text-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">📊 Las Heras Sports en Números</h2>
+        <p class="text-xl opacity-90">Más de una década construyendo comunidad deportiva</p>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div class="text-center">
+          <div class="text-4xl md:text-5xl font-bold mb-2">
+            <span class="counter" data-target="10">0</span>+
+          </div>
+          <p class="text-lg opacity-90">Años de experiencia</p>
+        </div>
+        <div class="text-center">
+          <div class="text-4xl md:text-5xl font-bold mb-2">
+            <span class="counter" data-target="8">0</span>
+          </div>
+          <p class="text-lg opacity-90">Actividades deportivas</p>
+        </div>
+        <div class="text-center">
+          <div class="text-4xl md:text-5xl font-bold mb-2">
+            <span class="counter" data-target="15">0</span>+
+          </div>
+          <p class="text-lg opacity-90">Canchas y espacios</p>
+        </div>
+        <div class="text-center">
+          <div class="text-4xl md:text-5xl font-bold mb-2">
+            <span class="counter" data-target="365">0</span>
+          </div>
+          <p class="text-lg opacity-90">Días al año abiertos</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sobre Nosotros -->
+  <section class="py-16 bg-white relative overflow-hidden" id="nosotros">
+    <div class="absolute inset-0 opacity-5">
+      <svg class="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+        <polygon fill="#22c55e" points="0,0 100,20 100,80 0,100"/>
+      </svg>
+    </div>
+    <div class="container mx-auto px-4 max-w-4xl relative z-10">
+      <div class="text-center mb-8">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-800">🏆 Sobre Nosotros</h2>
+      </div>
+      <div class="bg-white rounded-2xl shadow-2xl p-8 md:p-12">
+        <div class="grid md:grid-cols-2 gap-8 items-center">
+          <div>
+            <p class="text-lg text-gray-700 leading-relaxed mb-6">
+              Fundado en Lomas de Zamora, <span class="font-semibold text-green-600">Las Heras Sports</span> cuenta con más de 
+              <span class="font-bold text-2xl text-green-600">10 años</span> de trayectoria, promoviendo el deporte social y la comunidad local.
+            </p>
+            <p class="text-lg text-gray-700 leading-relaxed">
+              Nuestro predio ofrece instalaciones de primer nivel y actividades para todas las edades, 
+              siendo el punto de encuentro deportivo más completo de la zona.
+            </p>
+          </div>
+          <div class="space-y-4">
+            <div class="flex items-center space-x-3">
+              <div class="bg-green-100 p-2 rounded-full">
+                <span class="text-green-600 text-xl">📍</span>
+              </div>
+              <span class="text-gray-700 font-medium">Ubicación estratégica en Lomas</span>
+            </div>
+            <div class="flex items-center space-x-3">
+              <div class="bg-green-100 p-2 rounded-full">
+                <span class="text-green-600 text-xl">👨‍👩‍👧‍👦</span>
+              </div>
+              <span class="text-gray-700 font-medium">Ambiente familiar y seguro</span>
+            </div>
+            <div class="flex items-center space-x-3">
+              <div class="bg-green-100 p-2 rounded-full">
+                <span class="text-green-600 text-xl">🏅</span>
+              </div>
+              <span class="text-gray-700 font-medium">Instructores certificados</span>
+            </div>
+            <div class="flex items-center space-x-3">
+              <div class="bg-green-100 p-2 rounded-full">
+                <span class="text-green-600 text-xl">⚡</span>
+              </div>
+              <span class="text-gray-700 font-medium">Equipamiento de última generación</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Horarios y Tarifas -->
+  <section class="py-16 gradient-section" id="horarios">
+    <div class="container mx-auto px-4 max-w-4xl">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-800">🕐 Horarios & Información</h2>
+        <p class="text-lg text-gray-600">Estamos abiertos todos los días para que disfrutes del deporte</p>
+      </div>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="bg-white rounded-2xl shadow-xl p-8">
+          <h3 class="text-2xl font-bold mb-6 text-gray-800 flex items-center">
+            <span class="text-green-500 mr-3">📅</span>
+            Horarios de Atención
+          </h3>
+          <div class="space-y-4">
+            <div class="flex justify-between items-center p-4 bg-green-50 rounded-lg">
+              <span class="font-semibold text-gray-700">Lunes a Domingo</span>
+              <span class="text-green-600 font-bold">09:00 - 23:00</span>
+            </div>
+            <div class="bg-yellow-50 p-4 rounded-lg">
+              <p class="text-sm text-yellow-800">
+                <span class="font-semibold">💡 Importante:</span> Los horarios pueden variar según la actividad. 
+                Te recomendamos consultar con nuestro staff.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl shadow-xl p-8">
+          <h3 class="text-2xl font-bold mb-6 text-gray-800 flex items-center">
+            <span class="text-blue-500 mr-3">💳</span>
+            Formas de Pago
+          </h3>
+          <div class="space-y-3">
+            <div class="flex items-center space-x-3">
+              <span class="text-green-500">✅</span>
+              <span class="text-gray-700">Efectivo</span>
+            </div>
+            <div class="flex items-center space-x-3">
+              <span class="text-green-500">✅</span>
+              <span class="text-gray-700">Tarjetas de débito y crédito</span>
+            </div>
+            <div class="flex items-center space-x-3">
+              <span class="text-green-500">✅</span>
+              <span class="text-gray-700">Transferencia bancaria</span>
+            </div>
+            <div class="flex items-center space-x-3">
+              <span class="text-green-500">✅</span>
+              <span class="text-gray-700">Mercado Pago</span>
+            </div>
+          </div>
+          <div class="mt-6 p-4 bg-blue-50 rounded-lg">
+            <p class="text-sm text-blue-800">
+              <span class="font-semibold">📞 Consultas:</span> Contactanos por WhatsApp para información sobre tarifas actualizadas.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Ubicación -->
+  <section class="py-16 bg-white" id="ubicacion">
+    <div class="container mx-auto px-4 max-w-3xl">
+      <h2 class="text-3xl font-bold text-center mb-8">¿Dónde estamos?</h2>
+      <div class="flex justify-center mb-4">
+        <iframe src="https://www.google.com/maps?q=Av.+Las+Heras+1512,+Lomas+de+Zamora,+Buenos+Aires,+Argentina&output=embed" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <p class="text-center text-gray-700">Av. Las Heras 1512, Lomas de Zamora (CP 1832)</p>
+    </div>
+  </section>
+  <!-- Contacto -->
+  <section class="py-16 bg-white relative overflow-hidden" id="contacto">
+    <div class="absolute inset-0 opacity-5">
+      <svg class="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+        <polygon fill="#22c55e" points="0,20 100,0 100,100 0,80"/>
+      </svg>
+    </div>
+    <div class="container mx-auto px-4 max-w-4xl relative z-10">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-800">📱 Contacto Directo</h2>
+        <p class="text-lg text-gray-600">¡Estamos aquí para ayudarte! Contactanos de la forma que prefieras</p>
+      </div>
+      <div class="flex flex-col items-center justify-center">
+        <div class="bg-gradient-to-r from-green-500 to-green-600 rounded-3xl shadow-2xl p-8 mb-8 transform hover:scale-105 transition-all duration-300">
+          <a href="https://wa.me/5491142881188" target="_blank" class="btn-main btn-ripple text-white font-semibold flex items-center gap-3 text-xl">
+            <div class="bg-white bg-opacity-20 p-3 rounded-full">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-8 h-8">
+                <path d="M12 2C6.477 2 2 6.477 2 12c0 1.85.504 3.63 1.457 5.188L2 22l4.926-1.43A9.953 9.953 0 0 0 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18c-1.64 0-3.232-.443-4.61-1.28l-.33-.197-2.924.849.834-2.86-.215-.338C4.443 15.232 4 13.64 4 12c0-4.411 3.589-8 8-8s8 3.589 8 8-3.589 8-8 8zm4.293-5.293c-.267-.133-1.577-.777-1.82-.867-.243-.09-.42-.133-.597.134-.177.267-.687.867-.843 1.045-.156.178-.31.2-.577.067-.267-.134-1.127-.415-2.148-1.323-.794-.708-1.33-1.582-1.486-1.85-.156-.267-.017-.411.117-.544.12-.119.267-.31.4-.467.134-.156.178-.267.267-.445.089-.178.045-.334-.022-.467-.067-.133-.597-1.44-.818-1.974-.216-.52-.436-.45-.597-.459-.153-.008-.334-.01-.515-.01-.178 0-.467.067-.712.334-.244.267-.933.912-.933 2.223 0 1.311.953 2.577 1.086 2.755.133.178 1.876 2.867 4.55 3.91.637.219 1.134.349 1.522.447.64.162 1.223.139 1.684.084.514-.062 1.577-.644 1.8-1.267.222-.622.222-1.155.156-1.267-.067-.111-.244-.178-.511-.311z"/>
+              </svg>
+            </div>
+            <span>WhatsApp Directo</span>
+          </a>
+        </div>
+        
+        <div class="grid md:grid-cols-3 gap-6 w-full max-w-3xl">
+          <div class="bg-white rounded-xl shadow-lg p-6 text-center hover:shadow-xl transition-shadow">
+            <div class="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
+              <span class="text-blue-600 text-xl">📞</span>
+            </div>
+            <h3 class="font-semibold text-gray-800 mb-2">Teléfono</h3>
+            <a href="tel:+541142881188" class="text-blue-600 hover:text-blue-800 font-medium">
+              +54 11 4288-1188
+            </a>
+          </div>
+          
+          <div class="bg-white rounded-xl shadow-lg p-6 text-center hover:shadow-xl transition-shadow">
+            <div class="bg-pink-100 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
+              <span class="text-pink-600 text-xl">📸</span>
+            </div>
+            <h3 class="font-semibold text-gray-800 mb-2">Instagram</h3>
+            <a href="https://www.instagram.com/lasherassports/" target="_blank" class="text-pink-600 hover:text-pink-800 font-medium">
+              @lasherassports
+            </a>
+          </div>
+          
+          <div class="bg-white rounded-xl shadow-lg p-6 text-center hover:shadow-xl transition-shadow">
+            <div class="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
+              <span class="text-blue-600 text-xl">👥</span>
+            </div>
+            <h3 class="font-semibold text-gray-800 mb-2">Facebook</h3>
+            <a href="https://facebook.com/lasherassports" target="_blank" class="text-blue-600 hover:text-blue-800 font-medium">
+              /lasherassports
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Footer -->
+  <footer class="bg-black text-white py-6 mt-12">
+    <div class="container mx-auto px-4 text-center">
+      <p>&copy; 2025 Las Heras Sports · Lomas de Zamora</p>
+      <p class="text-sm mt-2">Desarrollado con Tailwind CSS · <a href="https://github.com/lasherassports" target="_blank" class="underline">GitHub</a></p>
+    </div>
+  </footer>
+  <!-- ...existing code... -->
+</body>
+</html>
