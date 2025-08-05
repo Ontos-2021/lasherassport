@@ -342,3 +342,20 @@ style.textContent = `
   }
 `;
 document.head.appendChild(style);
+
+// Función global para abrir Google Maps
+window.abrirGoogleMaps = function() {
+  const direccion = "Av. Las Heras 1512, Lomas de Zamora, Buenos Aires, Argentina";
+  const googleMapsUrl = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(direccion)}`;
+  
+  // Abrir en una nueva pestaña
+  window.open(googleMapsUrl, '_blank');
+  
+  // Enviar evento de analytics si Google Analytics está disponible
+  if (typeof gtag !== 'undefined') {
+    gtag('event', 'click_map', {
+      event_category: 'mapa',
+      event_label: 'abrir_google_maps'
+    });
+  }
+};
