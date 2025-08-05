@@ -300,7 +300,42 @@ class LasHerasApp {
 // Inicializar cuando el DOM esté listo
 document.addEventListener('DOMContentLoaded', () => {
   new LasHerasApp();
+  setupOtrosTelefonosToggle();
 });
+
+// Función para toggle de otros teléfonos
+function setupOtrosTelefonosToggle() {
+  const toggleButton = document.getElementById('toggle-otros-telefonos');
+  const otrosTelefonos = document.getElementById('otros-telefonos');
+  const toggleIcon = document.getElementById('toggle-icon');
+
+  if (toggleButton && otrosTelefonos && toggleIcon) {
+    toggleButton.addEventListener('click', function() {
+      const isExpanded = this.getAttribute('aria-expanded') === 'true';
+      
+      // Toggle visibility
+      otrosTelefonos.classList.toggle('hidden');
+      
+      // Update aria-expanded
+      this.setAttribute('aria-expanded', !isExpanded);
+      
+      // Rotate icon
+      if (isExpanded) {
+        toggleIcon.style.transform = 'rotate(0deg)';
+      } else {
+        toggleIcon.style.transform = 'rotate(180deg)';
+      }
+      
+      // Analytics tracking
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'toggle_otros_telefonos', {
+          event_category: 'contacto',
+          event_label: isExpanded ? 'cerrar' : 'abrir'
+        });
+      }
+    });
+  }
+}
 
 // CSS adicional para animaciones
 const style = document.createElement('style');

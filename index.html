@@ -56,6 +56,7 @@
           <a href="#actividades" class="text-gray-700 hover:text-green-600 transition-colors font-medium">Actividades</a>
           <a href="#nosotros" class="text-gray-700 hover:text-green-600 transition-colors font-medium">Nosotros</a>
           <a href="#horarios" class="text-gray-700 hover:text-green-600 transition-colors font-medium">Horarios</a>
+          <a href="#colegios" class="text-gray-700 hover:text-green-600 transition-colors font-medium">Colegios</a>
           <a href="#ubicacion" class="text-gray-700 hover:text-green-600 transition-colors font-medium">Ubicación</a>
           <a href="#contacto" class="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition-colors font-medium">Contacto</a>
         </div>
@@ -73,6 +74,7 @@
         <a href="#actividades">Actividades</a>
         <a href="#nosotros">Nosotros</a>
         <a href="#horarios">Horarios</a>
+        <a href="#colegios">Colegios</a>
         <a href="#ubicacion">Ubicación</a>
         <a href="#contacto">Contacto</a>
       </div>
@@ -116,89 +118,160 @@
         <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-800">⚽ Nuestras Actividades</h2>
         <p class="text-lg text-gray-600 max-w-2xl mx-auto">Descubrí todas las opciones deportivas y recreativas que tenemos para vos y tu familia</p>
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-        <!-- Card ejemplo -->
-        <div class="card-shadow bg-white rounded-xl overflow-hidden flex flex-col items-center p-6 hover:scale-105 transition-all duration-300 shine-effect float-animation">
-          <div class="bg-green-100 p-4 rounded-full mb-4">
-            <img src="assets/images/activities/futbol.svg" alt="Fútbol" class="w-12 h-12">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Canchas & Bar -->
+        <article class="card card-shadow bg-white rounded-xl overflow-hidden p-6 hover:scale-105 transition-all duration-300 shine-effect float-animation" id="canchas-bar">
+          <div class="bg-green-100 p-4 rounded-full mb-4 mx-auto w-fit">
+            <img src="assets/images/activities/futbol.svg" alt="Canchas & Bar" class="w-12 h-12">
           </div>
-          <h3 class="text-xl font-semibold mb-2 text-gray-800">Fútbol</h3>
-          <p class="text-gray-600 text-center text-sm leading-relaxed">Canchas 5, 7, 8 y 11. Escuela infantil y torneos internos.</p>
-          <div class="mt-4 px-3 py-1 bg-green-100 text-green-800 rounded-full text-xs font-medium">
-            ⭐ Más popular
+          <h3 class="text-xl font-semibold mb-2 text-gray-800 text-center">Canchas & Bar</h3>
+          <p class="text-gray-600 text-center text-sm leading-relaxed mb-4">Fútbol 5/7/9/11 + after-match en Bar Las Heras.</p>
+          <p class="text-sm text-gray-700 text-center mb-4">
+            Predio: <a href="tel:+541142881188" class="text-green-600 hover:text-green-800 font-medium">+54 11 4288-1188</a>
+          </p>
+          <a href="#" target="_blank" rel="noopener" class="btn-main bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg font-medium text-center block">Ver más</a>
+        </article>
+
+        <!-- Pádel Lomas -->
+        <article class="card card-shadow bg-white rounded-xl overflow-hidden p-6 hover:scale-105 transition-all duration-300 shine-effect float-animation" id="padel-lomas" style="animation-delay: 0.1s">
+          <div class="bg-blue-100 p-4 rounded-full mb-4 mx-auto w-fit">
+            <img src="assets/images/activities/padel.svg" alt="Pádel Lomas" class="w-12 h-12">
           </div>
-        </div>
-        <div class="card-shadow bg-white rounded-xl overflow-hidden flex flex-col items-center p-6 hover:scale-105 transition-all duration-300 shine-effect float-animation" style="animation-delay: 0.2s">
-          <div class="bg-blue-100 p-4 rounded-full mb-4">
-            <img src="assets/images/activities/padel.svg" alt="Pádel" class="w-12 h-12">
-          </div>
-          <h3 class="text-xl font-semibold mb-2 text-gray-800">Pádel</h3>
-          <p class="text-gray-600 text-center text-sm leading-relaxed">3 canchas outdoor de última generación, clases y reservas online.</p>
-          <div class="mt-4 px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-xs font-medium">
-            🆕 Nuevas canchas
-          </div>
-        </div>
-        <div class="card-shadow bg-white rounded-xl overflow-hidden flex flex-col items-center p-6 hover:scale-105 transition-all duration-300 shine-effect float-animation" style="animation-delay: 0.4s">
-          <div class="bg-pink-100 p-4 rounded-full mb-4">
+          <h3 class="text-xl font-semibold mb-2 text-gray-800 text-center">Pádel Lomas</h3>
+          <p class="text-gray-600 text-center text-sm leading-relaxed mb-4">3 canchas indoor, clases y ranking.</p>
+          <p class="text-sm text-gray-700 text-center mb-4">
+            Referente Pádel: <a href="tel:+54XXXXXXXXX" class="text-blue-600 hover:text-blue-800 font-medium">xxx-xxxx</a>
+          </p>
+          <a href="https://instagram.com/padellomaslasheras" target="_blank" rel="noopener" class="btn-main bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg font-medium text-center block">Ver más</a>
+        </article>
+
+        <!-- Hockey -->
+        <article class="card card-shadow bg-white rounded-xl overflow-hidden p-6 hover:scale-105 transition-all duration-300 shine-effect float-animation" id="hockey" style="animation-delay: 0.2s">
+          <div class="bg-pink-100 p-4 rounded-full mb-4 mx-auto w-fit">
             <img src="assets/images/activities/hockey.svg" alt="Hockey" class="w-12 h-12">
           </div>
-          <h3 class="text-xl font-semibold mb-2 text-gray-800">Hockey</h3>
-          <p class="text-gray-600 text-center text-sm leading-relaxed">Escuela femenina desde 6 años, coordinación Ale Gulla.</p>
-          <div class="mt-4 px-3 py-1 bg-pink-100 text-pink-800 rounded-full text-xs font-medium">
-            👩 Solo femenino
+          <h3 class="text-xl font-semibold mb-2 text-gray-800 text-center">Hockey</h3>
+          <p class="text-gray-600 text-center text-sm leading-relaxed mb-4">Alquiler + escuela femenina (6 +).</p>
+          <p class="text-sm text-gray-700 text-center mb-4">
+            Flor: <a href="tel:+54XXXXXXXXX" class="text-pink-600 hover:text-pink-800 font-medium">xxx-xxxx</a>
+          </p>
+          <a href="#" target="_blank" rel="noopener" class="btn-main bg-pink-500 hover:bg-pink-600 text-white px-4 py-2 rounded-lg font-medium text-center block">Ver más</a>
+        </article>
+
+        <!-- Catapumba Gym & Pileta -->
+        <article class="card card-shadow bg-white rounded-xl overflow-hidden p-6 hover:scale-105 transition-all duration-300 shine-effect float-animation" id="gym-pileta" style="animation-delay: 0.3s">
+          <div class="bg-orange-100 p-4 rounded-full mb-4 mx-auto w-fit">
+            <img src="assets/images/activities/gym.svg" alt="Catapumba Gym & Pileta" class="w-12 h-12">
           </div>
-        </div>
-        <div class="card-shadow bg-white rounded-xl overflow-hidden flex flex-col items-center p-6 hover:scale-105 transition-all duration-300 shine-effect float-animation" style="animation-delay: 0.6s">
-          <div class="bg-orange-100 p-4 rounded-full mb-4">
-            <img src="assets/images/activities/gym.svg" alt="Gym & Crossfit" class="w-12 h-12">
-          </div>
-          <h3 class="text-xl font-semibold mb-2 text-gray-800">Gym & Crossfit</h3>
-          <p class="text-gray-600 text-center text-sm leading-relaxed">Musculación, plataformas vibratorias, box de CrossFit.</p>
-          <div class="mt-4 px-3 py-1 bg-orange-100 text-orange-800 rounded-full text-xs font-medium">
-            💪 Todo equipado
-          </div>
-        </div>
-      </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-8">
-        <div class="card-shadow bg-white rounded-xl overflow-hidden flex flex-col items-center p-6 hover:scale-105 transition-all duration-300 shine-effect float-animation" style="animation-delay: 0.8s">
-          <div class="bg-cyan-100 p-4 rounded-full mb-4">
-            <img src="assets/images/activities/pileta.svg" alt="Pileta" class="w-12 h-12">
-          </div>
-          <h3 class="text-xl font-semibold mb-2 text-gray-800">Pileta / Natación</h3>
-          <p class="text-gray-600 text-center text-sm leading-relaxed">Actividades de pileta y gym acuático.</p>
-          <div class="mt-4 px-3 py-1 bg-cyan-100 text-cyan-800 rounded-full text-xs font-medium">
-            🏊 Acuático
-          </div>
-        </div>
-        <div class="card-shadow bg-white rounded-xl overflow-hidden flex flex-col items-center p-6 hover:scale-105 transition-all duration-300 shine-effect float-animation" style="animation-delay: 1s">
-          <div class="bg-yellow-100 p-4 rounded-full mb-4">
+          <h3 class="text-xl font-semibold mb-2 text-gray-800 text-center">Catapumba Gym & Pileta</h3>
+          <p class="text-gray-600 text-center text-sm leading-relaxed mb-4">Musculación y natación todo el año.</p>
+          <p class="text-sm text-gray-700 text-center mb-4">
+            Referente Catapumba: <a href="tel:+54XXXXXXXXX" class="text-orange-600 hover:text-orange-800 font-medium">xxx-xxxx</a>
+          </p>
+          <a href="#" target="_blank" rel="noopener" class="btn-main bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-lg font-medium text-center block">Ver más</a>
+        </article>
+
+        <!-- Colonia -->
+        <article class="card card-shadow bg-white rounded-xl overflow-hidden p-6 hover:scale-105 transition-all duration-300 shine-effect float-animation" id="colonia" style="animation-delay: 0.4s">
+          <div class="bg-yellow-100 p-4 rounded-full mb-4 mx-auto w-fit">
             <img src="assets/images/activities/colonia.svg" alt="Colonia" class="w-12 h-12">
           </div>
-          <h3 class="text-xl font-semibold mb-2 text-gray-800">Colonia</h3>
-          <p class="text-gray-600 text-center text-sm leading-relaxed">Programas recreativos para niños y adultos.</p>
-          <div class="mt-4 px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-xs font-medium">
-            👨‍👩‍👧‍👦 Familiar
+          <h3 class="text-xl font-semibold mb-2 text-gray-800 text-center">Colonia</h3>
+          <p class="text-gray-600 text-center text-sm leading-relaxed mb-4">Vacaciones de invierno/verano.</p>
+          <p class="text-sm text-gray-700 text-center mb-4">
+            Flor: <a href="tel:+54XXXXXXXXX" class="text-yellow-600 hover:text-yellow-800 font-medium">xxx-xxxx</a>
+          </p>
+          <a href="#" target="_blank" rel="noopener" class="btn-main bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded-lg font-medium text-center block">Ver más</a>
+        </article>
+
+        <!-- Salón de eventos -->
+        <article class="card card-shadow bg-white rounded-xl overflow-hidden p-6 hover:scale-105 transition-all duration-300 shine-effect float-animation" id="salon-eventos" style="animation-delay: 0.5s">
+          <div class="bg-purple-100 p-4 rounded-full mb-4 mx-auto w-fit">
+            <img src="assets/images/activities/eventos.svg" alt="Salón de eventos" class="w-12 h-12">
+          </div>
+          <h3 class="text-xl font-semibold mb-2 text-gray-800 text-center">Salón de eventos</h3>
+          <p class="text-gray-600 text-center text-sm leading-relaxed mb-4">Cumples, fiestas y eventos corporativos.</p>
+          <p class="text-sm text-gray-700 text-center mb-4">
+            Flor: <a href="tel:+54XXXXXXXXX" class="text-purple-600 hover:text-purple-800 font-medium">xxx-xxxx</a>
+          </p>
+          <a href="#" target="_blank" rel="noopener" class="btn-main bg-purple-500 hover:bg-purple-600 text-white px-4 py-2 rounded-lg font-medium text-center block">Ver más</a>
+        </article>
+
+        <!-- Área Verde -->
+        <article class="card card-shadow bg-white rounded-xl overflow-hidden p-6 hover:scale-105 transition-all duration-300 shine-effect float-animation" id="area-verde" style="animation-delay: 0.6s">
+          <div class="bg-green-100 p-4 rounded-full mb-4 mx-auto w-fit">
+            <img src="assets/images/activities/estacionamiento.svg" alt="Área Verde" class="w-12 h-12">
+          </div>
+          <h3 class="text-xl font-semibold mb-2 text-gray-800 text-center">Área Verde</h3>
+          <p class="text-gray-600 text-center text-sm leading-relaxed mb-4">Entrenamiento funcional outdoor.</p>
+          <p class="text-sm text-gray-700 text-center mb-4">
+            Referente Área Verde: <a href="tel:+54XXXXXXXXX" class="text-green-600 hover:text-green-800 font-medium">xxx-xxxx</a>
+          </p>
+          <a href="#" target="_blank" rel="noopener" class="btn-main bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg font-medium text-center block">Ver más</a>
+        </article>
+
+        <!-- Escuela River Lomas -->
+        <article class="card card-shadow bg-white rounded-xl overflow-hidden p-6 hover:scale-105 transition-all duration-300 shine-effect float-animation" id="river-lomas" style="animation-delay: 0.7s">
+          <div class="bg-red-100 p-4 rounded-full mb-4 mx-auto w-fit">
+            <img src="assets/images/activities/futbol.svg" alt="Escuela River Lomas" class="w-12 h-12">
+          </div>
+          <h3 class="text-xl font-semibold mb-2 text-gray-800 text-center">Escuela River Lomas</h3>
+          <p class="text-gray-600 text-center text-sm leading-relaxed mb-4">Fútbol formativo oficial River Plate.</p>
+          <p class="text-sm text-gray-700 text-center mb-4">
+            Referente River: <a href="tel:+54XXXXXXXXX" class="text-red-600 hover:text-red-800 font-medium">xxx-xxxx</a>
+          </p>
+          <a href="#" target="_blank" rel="noopener" class="btn-main bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-lg font-medium text-center block">Ver más</a>
+        </article>
+
+        <!-- Alquiler a Colegios -->
+        <article class="card card-shadow bg-white rounded-xl overflow-hidden p-6 hover:scale-105 transition-all duration-300 shine-effect float-animation" id="colegios" style="animation-delay: 0.8s">
+          <div class="bg-indigo-100 p-4 rounded-full mb-4 mx-auto w-fit">
+            <img src="assets/images/activities/estacionamiento.svg" alt="Alquiler a Colegios" class="w-12 h-12">
+          </div>
+          <h3 class="text-xl font-semibold mb-2 text-gray-800 text-center">Alquiler a Colegios</h3>
+          <p class="text-gray-600 text-center text-sm leading-relaxed mb-4">Jornadas deportivas o programa anual.</p>
+          <p class="text-sm text-gray-700 text-center mb-4">
+            Predio: <a href="tel:+541142881188" class="text-indigo-600 hover:text-indigo-800 font-medium">+54 11 4288-1188</a>
+          </p>
+          <a href="#colegios" class="btn-main bg-indigo-500 hover:bg-indigo-600 text-white px-4 py-2 rounded-lg font-medium text-center block">Ver más</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección Alquiler a Colegios -->
+  <section class="py-16 bg-white" id="colegios">
+    <div class="container mx-auto px-4 max-w-4xl">
+      <div class="text-center mb-8">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-800">🏫 Alquiler a Colegios</h2>
+        <p class="text-lg text-gray-600">Ofrecemos espacios deportivos ideales para jornadas educativas y programas anuales</p>
+      </div>
+      <div class="bg-gradient-to-r from-indigo-50 to-blue-50 rounded-2xl shadow-xl p-8">
+        <div class="grid md:grid-cols-2 gap-8 items-center">
+          <div>
+            <h3 class="text-2xl font-bold text-gray-800 mb-4">🎯 Modalidades disponibles</h3>
+            <ul class="space-y-3 text-gray-700">
+              <li class="flex items-center"><span class="text-green-500 mr-2">✅</span> Jornadas deportivas puntuales</li>
+              <li class="flex items-center"><span class="text-green-500 mr-2">✅</span> Programas anuales</li>
+              <li class="flex items-center"><span class="text-green-500 mr-2">✅</span> Torneos intercolegiales</li>
+              <li class="flex items-center"><span class="text-green-500 mr-2">✅</span> Actividades de integración</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-2xl font-bold text-gray-800 mb-4">🏟️ Instalaciones</h3>
+            <ul class="space-y-3 text-gray-700">
+              <li class="flex items-center"><span class="text-blue-500 mr-2">⚽</span> Canchas de fútbol múltiples</li>
+              <li class="flex items-center"><span class="text-blue-500 mr-2">🏓</span> Espacios para hockey</li>
+              <li class="flex items-center"><span class="text-blue-500 mr-2">🏊</span> Pileta y área acuática</li>
+              <li class="flex items-center"><span class="text-blue-500 mr-2">🚗</span> Estacionamiento seguro</li>
+            </ul>
           </div>
         </div>
-        <div class="card-shadow bg-white rounded-xl overflow-hidden flex flex-col items-center p-6 hover:scale-105 transition-all duration-300 shine-effect float-animation" style="animation-delay: 1.2s">
-          <div class="bg-purple-100 p-4 rounded-full mb-4">
-            <img src="assets/images/activities/eventos.svg" alt="Eventos" class="w-12 h-12">
-          </div>
-          <h3 class="text-xl font-semibold mb-2 text-gray-800">Eventos & Salón</h3>
-          <p class="text-gray-600 text-center text-sm leading-relaxed">Salón multieventos y parrilla al aire libre.</p>
-          <div class="mt-4 px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-xs font-medium">
-            🎉 Celebraciones
-          </div>
-        </div>
-        <div class="card-shadow bg-white rounded-xl overflow-hidden flex flex-col items-center p-6 hover:scale-105 transition-all duration-300 shine-effect float-animation" style="animation-delay: 1.4s">
-          <div class="bg-gray-100 p-4 rounded-full mb-4">
-            <img src="assets/images/activities/estacionamiento.svg" alt="Estacionamiento" class="w-12 h-12">
-          </div>
-          <h3 class="text-xl font-semibold mb-2 text-gray-800">Estacionamiento</h3>
-          <p class="text-gray-600 text-center text-sm leading-relaxed">Playón propio dentro del predio.</p>
-          <div class="mt-4 px-3 py-1 bg-gray-100 text-gray-800 rounded-full text-xs font-medium">
-            🚗 Gratuito
-          </div>
+        <div class="text-center mt-8">
+          <a href="mailto:info@lasherassports.com?subject=Consulta colegios – Las Heras Sports" class="btn-main bg-indigo-500 hover:bg-indigo-600 text-white px-8 py-3 rounded-lg font-semibold inline-flex items-center gap-2">
+            <span>📧</span>
+            Solicitar propuesta
+          </a>
         </div>
       </div>
     </div>
@@ -224,7 +297,7 @@
         <div class="text-center">
           <div class="bg-white bg-opacity-20 backdrop-blur-sm rounded-xl p-4 md:p-6 hover:bg-opacity-30 transition-all duration-300">
             <div class="text-4xl sm:text-5xl lg:text-6xl font-black mb-2 text-yellow-300 text-shadow-strong">
-              <span class="counter" data-target="8">0</span>
+              <span class="counter" data-target="9">0</span>
             </div>
             <p class="text-sm sm:text-base lg:text-lg font-semibold text-white text-shadow">Actividades deportivas</p>
           </div>
@@ -489,12 +562,12 @@
           </a>
         </div>
         
-        <div class="grid md:grid-cols-3 gap-6 w-full max-w-3xl">
+        <div class="grid md:grid-cols-3 gap-6 w-full max-w-3xl mb-8">
           <div class="bg-white rounded-xl shadow-lg p-6 text-center hover:shadow-xl transition-shadow">
             <div class="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
               <span class="text-blue-600 text-xl">📞</span>
             </div>
-            <h3 class="font-semibold text-gray-800 mb-2">Teléfono</h3>
+            <h3 class="font-semibold text-gray-800 mb-2">Teléfono Principal</h3>
             <a href="tel:+541142881188" class="text-blue-600 hover:text-blue-800 font-medium">
               +54 11 4288-1188
             </a>
@@ -518,6 +591,49 @@
             <a href="https://facebook.com/lasherassports" target="_blank" class="text-blue-600 hover:text-blue-800 font-medium">
               /lasherassports
             </a>
+          </div>
+        </div>
+
+        <!-- Otros teléfonos toggle -->
+        <div class="w-full max-w-2xl">
+          <button 
+            id="toggle-otros-telefonos" 
+            class="bg-gray-100 hover:bg-gray-200 text-gray-800 px-6 py-3 rounded-lg font-medium w-full mb-4 flex items-center justify-center gap-2 transition-colors"
+            aria-expanded="false"
+          >
+            <span>📋 Otros teléfonos por actividad</span>
+            <svg class="w-4 h-4 transform transition-transform" id="toggle-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          
+          <div id="otros-telefonos" class="hidden bg-gray-50 rounded-lg p-6">
+            <h4 class="font-semibold text-gray-800 mb-4 text-center">Contactos por actividad</h4>
+            <div class="grid md:grid-cols-2 gap-4 text-sm">
+              <div class="flex justify-between items-center p-3 bg-white rounded-lg">
+                <span class="text-gray-700">Referente Pádel</span>
+                <a href="tel:+54XXXXXXXXX" class="text-blue-600 hover:text-blue-800 font-medium">xxx-xxxx</a>
+              </div>
+              <div class="flex justify-between items-center p-3 bg-white rounded-lg">
+                <span class="text-gray-700">Flor (Hockey/Colonia/Eventos)</span>
+                <a href="tel:+54XXXXXXXXX" class="text-pink-600 hover:text-pink-800 font-medium">xxx-xxxx</a>
+              </div>
+              <div class="flex justify-between items-center p-3 bg-white rounded-lg">
+                <span class="text-gray-700">Referente Catapumba</span>
+                <a href="tel:+54XXXXXXXXX" class="text-orange-600 hover:text-orange-800 font-medium">xxx-xxxx</a>
+              </div>
+              <div class="flex justify-between items-center p-3 bg-white rounded-lg">
+                <span class="text-gray-700">Referente Área Verde</span>
+                <a href="tel:+54XXXXXXXXX" class="text-green-600 hover:text-green-800 font-medium">xxx-xxxx</a>
+              </div>
+              <div class="flex justify-between items-center p-3 bg-white rounded-lg">
+                <span class="text-gray-700">Referente River</span>
+                <a href="tel:+54XXXXXXXXX" class="text-red-600 hover:text-red-800 font-medium">xxx-xxxx</a>
+              </div>
+            </div>
+            <p class="text-xs text-gray-500 text-center mt-4">
+              💡 Para consultas generales, usar el teléfono principal del predio
+            </p>
           </div>
         </div>
       </div>
