@@ -42,7 +42,7 @@ Define the task to achieve, including specific requirements, constraints, and su
       "slug": "padel-lomas",
       "nombre": "Pádel Lomas",
       "descripcion": "Alquiler de canchas, escuela de Padel, torneos y cancha abierta.",
-      "tel": "wa.me/6591130059225",
+      "tel": "wa.me/5491130059225",
     },
     {
       "slug": "hockey",

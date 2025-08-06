@@ -62,14 +62,15 @@ applyTo: '**'
 - Always test: mobile, tablet, desktop viewports
 
 ### Layout Patterns
-- **Activities Grid**: `grid-cols-1 md:grid-cols-2 lg:grid-cols-3`
+- **Activities Grid**: `grid-cols-1 md:grid-cols-2 lg:grid-cols-4`
 - **Content Containers**: `max-w-4xl mx-auto` for readability
 - **Hero Section**: Full height with responsive text scaling
+- **Activity Cards**: Direct WhatsApp links for immediate contact
 
 ## 🏢 Business Context Integration
 
 ### Contact Information
-- **Main Phone**: +54 11 4288-1188
+- **Main Phone**: +54 9 11 5840-7270 (updated)
 - **WhatsApp**: Floating button (bottom-right, green branded)
 - **Instagram Bot**: Primary CTA in hero section
 - **Address**: Av. Las Heras 1512, Lomas de Zamora (CP 1832)
@@ -78,6 +79,7 @@ applyTo: '**'
 - Fútbol (multiple field sizes), Pádel (3 courts), Hockey (female school)
 - Gym/CrossFit, Swimming, Colonies, Events, Parking
 - Each activity has specific color coding in cards
+- **Special Case - River Lomas**: Uses River Plate colors (white, black, red) with enhanced styling
 
 ## 💻 Technical Conventions
 
