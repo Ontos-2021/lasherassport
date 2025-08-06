@@ -29,37 +29,34 @@ Define the task to achieve, including specific requirements, constraints, and su
 
 ```json
 {
-  "tel_predio": "+54 11 4288-1188",
+  "tel_predio": "+54 11 58407270",
   "activities": [
     {
       "slug": "canchas-bar",
       "nombre": "Canchas & Bar",
-      "descripcion": "Fútbol 5/7/9/11 + after-match en Bar Las Heras.",
-      "tel": "+54 11 4288-1188",
-      "responsable": "Predio",
+      "descripcion": "Predio Las Heras Sports: Alquiler de canchas de Fútbol y Hockey - Bar y Parrilla.",
+      "tel": "wa.me/5491158407270",
       "url": "#"
     },
     {
       "slug": "padel-lomas",
       "nombre": "Pádel Lomas",
-      "descripcion": "3 canchas indoor, clases y ranking.",
-      "tel": "xxx-xxxx",
-      "responsable": "Referente Pádel",
-      "url": "https://instagram.com/padellomaslasheras"
+      "descripcion": "Alquiler de canchas, escuela de Padel, torneos y cancha abierta.",
+      "tel": "wa.me/6591130059225",
     },
     {
       "slug": "hockey",
       "nombre": "Hockey",
-      "descripcion": "Alquiler + escuela femenina (6 +).",
-      "tel": "xxx-xxxx",
-      "responsable": "Flor",
-      "url": "#"
+      "descripcion": "Escuela femenina de hockey sobre césped para mayores y menores.",
+      "tel": "wa.me/5491134131188",
+      "responsable": "Ale Gulla",
+      "url": "https://instagram.com/alegullalasherashockey"
     },
     {
       "slug": "gym-pileta",
       "nombre": "Catapumba Gym & Pileta",
-      "descripcion": "Musculación y natación todo el año.",
-      "tel": "xxx-xxxx",
+      "descripcion": "Gimnasio, natación, crossfit y funcional",
+      "tel": "wa.me/5491123572169",
       "responsable": "Referente Catapumba",
       "url": "#"
     },
@@ -67,40 +64,33 @@ Define the task to achieve, including specific requirements, constraints, and su
       "slug": "colonia",
       "nombre": "Colonia",
       "descripcion": "Vacaciones de invierno/verano.",
-      "tel": "xxx-xxxx",
-      "responsable": "Flor",
-      "url": "#"
-    },
-    {
-      "slug": "salon-eventos",
-      "nombre": "Salón de eventos",
-      "descripcion": "Cumples, fiestas y eventos corporativos.",
-      "tel": "xxx-xxxx",
-      "responsable": "Flor",
-      "url": "#"
+      "tel": "wa.me/5491134131188",
+      "responsable": "Ale Gulla",
+      "url": "https://instagram.com/veranolasheras"
     },
     {
       "slug": "area-verde",
-      "nombre": "Área Verde",
-      "descripcion": "Entrenamiento funcional outdoor.",
-      "tel": "xxx-xxxx",
+      "nombre": "Área Verde Multiespacio",
+      "descripcion": "Salón de eventos: Cumples, fiestas y eventos corporativos. Entrada independiente por Estrada.",
+      "tel": "wa.me/5491125344549",
       "responsable": "Referente Área Verde",
-      "url": "#"
+      "url": "https://instagram.com/areaverdemultiespacio"
     },
     {
       "slug": "river-lomas",
       "nombre": "Escuela River Lomas",
-      "descripcion": "Fútbol formativo oficial River Plate.",
-      "tel": "xxx-xxxx",
+      "descripcion": "Fútbol formativo Oficial River Plate.",
+      "tel": "wa.me/5491168440278",
       "responsable": "Referente River",
-      "url": "#"
+      "url": "https://instagram.com/escuelariverlomas"
     },
     {
       "slug": "colegios",
       "nombre": "Alquiler a Colegios",
       "descripcion": "Jornadas deportivas o programa anual.",
-      "tel": "+54 11 4288-1188",
+      "tel": "wa.me/5491142881188",
       "responsable": "Predio",
+      "tel": "wa.me/5491158407270",
       "url": "#colegios"
     }
   ]
