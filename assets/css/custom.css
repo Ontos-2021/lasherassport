@@ -21,10 +21,22 @@ body {
 /* Animación de hover para botones principales */
 .btn-main {
   transition: transform 0.15s cubic-bezier(.4,0,.2,1), box-shadow 0.15s cubic-bezier(.4,0,.2,1);
+  position: relative;
 }
 .btn-main:hover {
   transform: scale(1.05);
   box-shadow: 0 4px 24px 0 rgba(34, 197, 94, 0.15);
+}
+
+/* Fix para botones dentro de cards - evita conflictos de posicionamiento */
+.card .btn-main {
+  position: static !important;
+  z-index: 10;
+}
+
+.card .btn-main:hover {
+  transform: scale(1.02) !important; /* Efecto más sutil para evitar overflow */
+  box-shadow: 0 2px 12px 0 rgba(34, 197, 94, 0.15) !important;
 }
 
 /* WhatsApp botón flotante (opcional) */
@@ -121,6 +133,7 @@ body {
 .btn-ripple {
   position: relative;
   overflow: hidden;
+  z-index: 1;
 }
 
 .btn-ripple::before {
@@ -134,7 +147,8 @@ body {
   background: rgba(255, 255, 255, 0.3);
   transition: width 0.6s, height 0.6s, top 0.6s, left 0.6s;
   transform: translate(-50%, -50%);
-  z-index: 0;
+  z-index: -1;
+  pointer-events: none;
 }
 
 .btn-ripple:hover::before {
@@ -142,9 +156,10 @@ body {
   height: 300px;
 }
 
-.btn-ripple span {
+.btn-ripple span,
+.btn-ripple svg {
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 
 /* Animación flotante para cards */
@@ -172,10 +187,18 @@ body {
   height: 100%;
   background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
   transition: left 0.5s;
+  pointer-events: none;
+  z-index: 1;
 }
 
 .shine-effect:hover::after {
   left: 100%;
+}
+
+/* Asegurar que el contenido de la card esté por encima del shine effect */
+.shine-effect > * {
+  position: relative;
+  z-index: 2;
 }
 
 /* Pulso para elementos destacados */
