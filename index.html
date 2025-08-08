@@ -49,7 +49,9 @@
     <div class="container mx-auto px-4 relative">
       <div class="flex items-center justify-between h-16">
         <div class="flex items-center">
-          <img src="assets/images/las_heras_sports_logo_transparent.png" alt="Las Heras Sports" class="h-12 w-auto">
+          <a href="#" id="logo-navbar-link">
+            <img src="assets/images/las_heras_sports_logo_transparent.png" alt="Las Heras Sports" class="h-12 w-auto">
+          </a>
         </div>
         <div class="hidden md:flex space-x-6">
           <a href="#actividades" class="text-gray-700 hover:text-green-600 transition-colors font-medium">Actividades</a>
@@ -89,11 +91,11 @@
   <!-- Hero Section -->
   <section class="relative h-screen bg-cover bg-center">
     <div id="hero-slider" class="absolute inset-0 hero-slider" aria-label="Galería de imágenes del predio" role="region">
-      <div class="hero-slide active" style="background-image: url('assets/images/hero/Foto1.jpg')" aria-hidden="true"></div>
-      <div class="hero-slide" style="background-image: url('assets/images/hero/Foto2.jpg')" aria-hidden="true"></div>
-      <div class="hero-slide" style="background-image: url('assets/images/hero/Foto3.jpg')" aria-hidden="true"></div>
-      <div class="hero-slide" style="background-image: url('assets/images/hero/Foto4.jpg')" aria-hidden="true"></div>
-      <div class="hero-slide" style="background-image: url('assets/images/hero/Foto5.jpg')" aria-hidden="true"></div>
+      <div class="hero-slide active" style="background-image: url('assets/images/hero/Foto1.webp')" aria-hidden="true"></div>
+      <div class="hero-slide" style="background-image: url('assets/images/hero/Foto2.webp')" aria-hidden="true"></div>
+      <div class="hero-slide" style="background-image: url('assets/images/hero/Foto3.webp')" aria-hidden="true"></div>
+      <div class="hero-slide" style="background-image: url('assets/images/hero/Foto4.webp')" aria-hidden="true"></div>
+      <div class="hero-slide" style="background-image: url('assets/images/hero/Foto5.webp')" aria-hidden="true"></div>
     </div>
     <div class="absolute inset-0 gradient-hero"></div>
     <div class="relative z-10 flex items-center justify-center h-full text-center text-white">
@@ -516,7 +518,7 @@
                 </div>
                 <div>
                   <h4 class="font-semibold text-gray-800 text-sm md:text-base">Teléfono</h4>
-                  <p class="text-gray-600 text-sm md:text-base">+54 11 4288-1188</p>
+                  <p class="text-gray-600 text-sm md:text-base">+54 9 11 5840-7270</p>
                 </div>
               </div>
               
@@ -693,6 +695,23 @@
       <p class="text-sm mt-2">¿Necesitás una página web? · <a href="https://wa.me/5491123162470?text=Hola%2C%20estoy%20interesado%20en%20cotizar%20una%20p%C3%A1gina%20web" target="_blank" class="underline hover:text-green-400 transition-colors">Contactanos aquí</a></p>
     </div>
   </footer>
-  <!-- ...existing code... -->
+  <!-- Scroll suave al Hero al hacer click en el logo del navbar -->
+  <!-- (Evita el offset del navbar) -->
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var logo = document.getElementById('logo-navbar-link');
+    if (logo) {
+      logo.addEventListener('click', function(e) {
+        e.preventDefault();
+        var hero = document.querySelector('section');
+        if (hero) {
+          var navbarHeight = 80;
+          var top = hero.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
+          window.scrollTo({ top, behavior: 'smooth' });
+        }
+      });
+    }
+  });
+  </script>
 </body>
 </html>
