@@ -19,6 +19,10 @@ class LasHerasApp {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function(e) {
         const targetId = this.getAttribute('href');
+        // Evitar error con href="#" u href vaco
+        if (!targetId || targetId === '#' || targetId.trim().length < 2) {
+          return;
+        }
         const target = document.querySelector(targetId);
         
         if(target) {
