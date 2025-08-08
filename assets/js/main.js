@@ -11,6 +11,7 @@ class LasHerasApp {
     this.setupMobileMenu();
     this.setupCTAButtons();
     this.setupParallax();
+    this.setupHeroCarousel();
   }
 
   bindEvents() {
@@ -294,6 +295,72 @@ class LasHerasApp {
       console.log('Instagram bot clicked');
       // gtag('event', 'click', { event_category: 'contact', event_label: 'instagram_bot' });
     });
+  }
+
+  // Nuevo: Carrusel del Hero
+  setupHeroCarousel() {
+    const slider = document.getElementById('hero-slider');
+    if (!slider) return;
+
+    const slides = Array.from(slider.querySelectorAll('.hero-slide'));
+    const prev = document.getElementById('hero-prev');
+    const next = document.getElementById('hero-next');
+    const dotsContainer = document.getElementById('hero-dots');
+    let index = 0;
+    let autoplayId = null;
+    const interval = 5000;
+
+    const goTo = (i) => {
+      slides.forEach((s, idx) => s.classList.toggle('active', idx === i));
+      // Dots
+      if (dotsContainer) {
+        const dots = dotsContainer.querySelectorAll('button');
+        dots.forEach((d, di) => d.classList.toggle('active', di === i));
+      }
+      index = i;
+    };
+
+    const nextSlide = () => goTo((index + 1) % slides.length);
+    const prevSlide = () => goTo((index - 1 + slides.length) % slides.length);
+
+    // Build dots
+    if (dotsContainer) {
+      dotsContainer.innerHTML = '';
+      slides.forEach((_, i) => {
+        const b = document.createElement('button');
+        b.setAttribute('aria-label', `Ir al slide ${i + 1}`);
+        b.addEventListener('click', () => {
+          goTo(i);
+          restartAutoplay();
+        });
+        dotsContainer.appendChild(b);
+      });
+    }
+
+    const startAutoplay = () => {
+      stopAutoplay();
+      autoplayId = setInterval(nextSlide, interval);
+    };
+    const stopAutoplay = () => {
+      if (autoplayId) clearInterval(autoplayId);
+      autoplayId = null;
+    };
+    const restartAutoplay = () => {
+      stopAutoplay();
+      startAutoplay();
+    };
+
+    // Controls
+    prev?.addEventListener('click', () => { prevSlide(); restartAutoplay(); });
+    next?.addEventListener('click', () => { nextSlide(); restartAutoplay(); });
+
+    // Pause on hover
+    slider.addEventListener('mouseenter', stopAutoplay);
+    slider.addEventListener('mouseleave', startAutoplay);
+
+    // Init
+    goTo(0);
+    startAutoplay();
   }
 }
 

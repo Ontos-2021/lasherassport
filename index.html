@@ -87,7 +87,14 @@
     </svg>
   </a>
   <!-- Hero Section -->
-  <section class="relative h-screen bg-cover bg-center" style="background-image: url('assets/images/hero/cancha-aerea.jpg')">
+  <section class="relative h-screen bg-cover bg-center">
+    <div id="hero-slider" class="absolute inset-0 hero-slider" aria-label="Galería de imágenes del predio" role="region">
+      <div class="hero-slide active" style="background-image: url('assets/images/hero/Foto1.jpg')" aria-hidden="true"></div>
+      <div class="hero-slide" style="background-image: url('assets/images/hero/Foto2.jpg')" aria-hidden="true"></div>
+      <div class="hero-slide" style="background-image: url('assets/images/hero/Foto3.jpg')" aria-hidden="true"></div>
+      <div class="hero-slide" style="background-image: url('assets/images/hero/Foto4.jpg')" aria-hidden="true"></div>
+      <div class="hero-slide" style="background-image: url('assets/images/hero/Foto5.jpg')" aria-hidden="true"></div>
+    </div>
     <div class="absolute inset-0 gradient-hero"></div>
     <div class="relative z-10 flex items-center justify-center h-full text-center text-white">
       <div class="max-w-4xl px-4">
@@ -103,6 +110,18 @@
         </div>
       </div>
     </div>
+    <!-- Controles del carrusel -->
+    <button id="hero-prev" class="hero-control prev" aria-label="Slide anterior">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="20" height="20" aria-hidden="true">
+        <path d="M15.41 7.41 14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+      </svg>
+    </button>
+    <button id="hero-next" class="hero-control next" aria-label="Slide siguiente">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="20" height="20" aria-hidden="true">
+        <path d="M8.59 16.59 10 18l6-6-6-6-1.41 1.41L12.17 12z"/>
+      </svg>
+    </button>
+    <div id="hero-dots" class="hero-dots" aria-label="Indicadores del carrusel"></div>
     <!-- Scroll indicator -->
     <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
       <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -110,6 +129,14 @@
       </svg>
     </div>
   </section>
+
+  <!-- Marca / Logo destacado -->
+  <section id="marca" class="py-10 md:py-14 bg-white">
+    <div class="container mx-auto px-4 text-center">
+      <img src="assets/images/las_heras_sports_logo_transparent.png" alt="Las Heras Sports - Logo" class="mx-auto w-56 sm:w-64 md:w-80 lg:w-[28rem] h-auto" />
+    </div>
+  </section>
+
   <!-- Actividades -->
   <section class="py-16 gradient-section pattern-dots" id="actividades">
     <div class="container mx-auto px-4">
@@ -225,6 +252,7 @@
             <span>Instagram</span>
           </a>
         </article>
+
         <!-- Escuela River Lomas -->
         <article class="card card-shadow bg-white rounded-xl overflow-hidden p-6 hover:scale-105 transition-all duration-300 shine-effect float-animation" id="river-lomas" style="animation-delay: 0.6s">
           <div class="bg-gray-700 p-4 rounded-full mb-4 mx-auto w-fit border-2 border-red-500">
@@ -483,7 +511,7 @@
               <div class="flex items-start gap-3 md:gap-4">
                 <div class="bg-blue-100 p-2 md:p-3 rounded-lg flex-shrink-0">
                   <svg class="w-5 h-5 md:w-6 md:h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 002-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
                   </svg>
                 </div>
                 <div>
@@ -588,7 +616,7 @@
             </div>
             <h3 class="font-semibold text-gray-800 mb-2">Teléfono Principal</h3>
             <a href="tel:+5491158407270" class="text-blue-600 hover:text-blue-800 font-medium">
-              +54 9 11 5840-7270
+              +54 9 11 5840-7270  
             </a>
           </div>
           

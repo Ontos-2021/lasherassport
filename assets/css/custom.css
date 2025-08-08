@@ -1,4 +1,3 @@
-
 /* custom.css - estilos adicionales para Las Heras Sports */
 :root {
   --primary-green: #22c55e;
@@ -105,7 +104,7 @@ body {
 
 /* Gradientes personalizados */
 .gradient-hero {
-  background: linear-gradient(135deg, rgba(34, 197, 94, 0.9) 0%, rgba(22, 163, 74, 0.9) 100%);
+  background: linear-gradient(135deg, rgba(34, 197, 94, 0.2) 0%, rgba(22, 163, 74, 0.15) 100%);
 }
 
 .gradient-section {
@@ -229,3 +228,15 @@ body {
     font-size: 1.25rem !important;
   }
 }
+
+/* Hero Carousel */
+.hero-slider { position: absolute; inset: 0; overflow: hidden; }
+.hero-slide { position: absolute; inset: 0; background-size: cover; background-position: center; opacity: 0; transition: opacity 800ms ease; }
+.hero-slide.active { opacity: 1; }
+.hero-control { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.35); color: #fff; border-radius: 9999px; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; z-index: 20; }
+.hero-control:hover { background: rgba(0,0,0,0.5); }
+.hero-control.prev { left: 16px; }
+.hero-control.next { right: 16px; }
+.hero-dots { position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); display: flex; gap: 8px; z-index: 20; }
+.hero-dots button { width: 10px; height: 10px; border-radius: 9999px; background: rgba(255,255,255,0.5); border: none; cursor: pointer; }
+.hero-dots button.active { background: #fff; }
