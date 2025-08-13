@@ -264,23 +264,23 @@ class LasHerasApp {
   setupCTAButtons() {
     // Rastrear clicks en botones principales
     document.querySelectorAll('.btn-main').forEach(button => {
-      button.addEventListener('click', function() {
+      button.addEventListener('click', function(e) {
         console.log('CTA clicked:', this.textContent.trim());
-        
-        // Añadir efecto ripple
+
+        // Añadir efecto ripple (uso explícito de e en lugar de event global)
         const ripple = document.createElement('span');
         const rect = this.getBoundingClientRect();
         const size = Math.max(rect.width, rect.height);
-        const x = event.clientX - rect.left - size / 2;
-        const y = event.clientY - rect.top - size / 2;
-        
+        const x = (e.clientX || (rect.left + rect.width / 2)) - rect.left - size / 2;
+        const y = (e.clientY || (rect.top + rect.height / 2)) - rect.top - size / 2;
+
         ripple.style.width = ripple.style.height = size + 'px';
         ripple.style.left = x + 'px';
         ripple.style.top = y + 'px';
         ripple.classList.add('ripple');
-        
+
         this.appendChild(ripple);
-        
+
         setTimeout(() => {
           ripple.remove();
         }, 600);
@@ -298,6 +298,22 @@ class LasHerasApp {
     document.querySelector('a[href*="instagram"]')?.addEventListener('click', () => {
       console.log('Instagram bot clicked');
       // gtag('event', 'click', { event_category: 'contact', event_label: 'instagram_bot' });
+    });
+
+    // Tracking específico para nuevos CTA del hero
+    const ctaActividades = document.getElementById('cta-actividades');
+    const ctaReserva = document.getElementById('cta-reserva');
+    ctaActividades?.addEventListener('click', () => {
+      console.log('CTA Hero Actividades');
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'click_hero_actividades', { event_category: 'cta', event_label: 'hero_conocer_actividades' });
+      }
+    });
+    ctaReserva?.addEventListener('click', () => {
+      console.log('CTA Hero Reserva');
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'click_hero_reserva', { event_category: 'cta', event_label: 'hero_reservar_cancha_externo' });
+      }
     });
   }
 
