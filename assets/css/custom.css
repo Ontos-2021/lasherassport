@@ -240,3 +240,22 @@ body {
 .hero-dots { position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); display: flex; gap: 8px; z-index: 20; }
 .hero-dots button { width: 10px; height: 10px; border-radius: 9999px; background: rgba(255,255,255,0.5); border: none; cursor: pointer; }
 .hero-dots button.active { background: #fff; }
+
+/* Ajustes responsivos para evitar superposición de controles con CTAs en mobile */
+@media (max-width: 640px) {
+  /* En mobile: colocar controles MÁS ABAJO (debajo de los CTAs) */
+  .hero-control { 
+    top: auto;          /* anulamos posición original */
+    bottom: 120px;      /* espacio suficiente sobre los dots y scroll indicator */
+    transform: none;    /* quitamos translateY que dependía de top */
+    width: 36px; 
+    height: 36px; 
+  }
+  .hero-control.prev { left: 8px; }
+  .hero-control.next { right: 8px; }
+}
+@media (max-width: 480px) {
+  .hero-control { bottom: 110px; }
+  /* Alternativa (descomentar si querés ocultarlas en pantallas ultra chicas): */
+  /* .hero-control { display:none; } */
+}
